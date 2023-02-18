@@ -1,0 +1,172 @@
+html, body {
+   
+    background-color: #e5e1e1;
+    font-family: sans-serif;
+    height: 690px;
+    width: 1524px;
+  }
+.map {
+    border: medium solid rgb(51, 45, 45);
+    background-color: #0B0F1B;
+    margin: 10px 0 0 740px;
+   height: 630px;
+   width: 795px;
+}
+
+.cities {
+    fill: #a5abb8;
+    stroke: rgb(255, 254, 254);
+    stroke-width: 0.2px;
+}
+
+
+.gratLines {
+    fill: none;
+    stroke: #999;
+    stroke-width: 0.1px;
+}
+
+.gratBackground {
+    fill: #797979;
+}
+
+.regions {
+    stroke: rgb(22, 0, 222);
+    stroke-width: 0.1px;
+    stroke-linecap: round;
+}
+
+.numbers {
+    fill: white;
+    font-family: sans-serif;
+}
+
+.chart {
+    float: left;
+    position: relative ;
+    bottom: 355px;
+    box-shadow: 2px 2px 4px rgb(54, 54, 55);
+   
+}
+
+.chartTitle {
+    font-family: sans-serif;
+    font-size: 1.5em;
+    font-weight: bold;
+   color: rgb(0, 0, 0);
+   margin-top: 100px;
+   margin-left: 40px;
+   
+    
+    
+}
+
+.chartBackground {
+    fill: rgba(125, 123, 123, 0.2);
+   
+}
+
+.chartFrame {
+    fill: none;
+    stroke: #525252;
+    stroke-width: 3px;
+    shape-rendering: crispEdges;
+    
+}
+
+
+
+
+.dropdown {
+    position: absolute;
+    top: 95px;
+    left: 60px;
+    z-index: 10;
+    font-family: sans-serif;
+    font-size: 1em;
+    font-weight: bold;
+    padding: 2px;
+    border: 1px solid #325B8B;
+    box-shadow: 2px 2px 4px rgb(255, 255, 255);
+}
+
+.infolabel h1 {
+    margin: 0 20px 0 0;
+    padding: 0;
+    display: inline-block;
+    line-height: 1em;
+}
+
+
+
+.infolabel {
+    margin: 0 20px 0 0;
+    position: absolute;
+    height: 50px;
+    min-width: 100px;
+    color: #fff;
+    background-color: rgb(70, 76, 77);
+    border: solid thin #fff;
+    padding: 5px 10px;
+    top: -75px;
+}
+
+
+#title{
+    color: white;
+    padding: 15px 20px 10px 30px;
+    font-weight: bold;
+}
+
+#metadata{
+    color: #cccccc;
+    padding: 10px 20px 0px 20px;
+    text-align: right;
+}
+
+
+#information{
+    line-height: 1;
+    padding-top: 10px;
+    color: #fff;
+    width: 600px;
+    margin: 60px 0px 0 0px;
+}
+
+
+
+.col-md-4{
+    background-color: #0D1117;
+    width: 516px;
+    margin: 0px 0px 0px 0px;
+    position: fixed;
+    float: left;
+    right: 0px;
+    height: 71px;
+
+   
+    
+}
+
+.col-md-6{
+    background-color:  #1b1818;
+    bottom: 0px; 
+    width: 1535px;
+    position:fixed;
+    height: 35px;
+   
+}
+.col-md-7{
+    position: absolute;
+    background-color: #292727;
+    width: 673px;
+    height: 270px;
+    margin: 10px 0px 0 60px;
+    box-shadow: 2px 2px 8px rgb(54, 54, 55);
+}
+
+.col-md-8{
+    background-color: #0D1117;
+    
+}
+

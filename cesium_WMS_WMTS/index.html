@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no" />
+    <title>Cesium #1</title>
+
+
+    <script src="http://localhost:8084/cesium/lib/Cesium-1.101/Build/Cesium/Cesium.js"></script>
+    <script src="http://localhost:8084/cesium/lib/Cesium-1.101/Apps/Sandcastle/Sandcastle-header.js"></script>
+
+</head>
+<style>
+    @import url(http://localhost:8084/cesium/lib/Cesium-1.101/Apps/Sandcastle/CesiumSandcastle.css);
+
+    @import url(http://localhost:8084/cesium/lib/Cesium-1.101/Apps/Sandcastle/templates/bucket.css);
+</style>
+
+<body>
+    <div id="cesiumContainer" class="fullSize"></div>
+    <div id="loadingOverlay">
+        <h1>Loading...</h1>
+    </div>
+    <div id="toolbar"></div>
+   	
+
+
+    <script type="text/javascript">
+	
+        var viewer = new Cesium.Viewer("cesiumContainer",{
+                       //  Geocoder: true,
+                        // Animation: true,
+                         //CreditsDisplay: false,
+                         //Timeline: false,
+                        // FullscreenButton: false
+        });
+       //viewer.scene.primitives.add(Cesium.createOsmBuildings());
+      
+       viewer.camera.setView({destination : Cesium.Cartesian3.fromDegrees(35,40,3000000),});
+
+
+
+
+   
+
+//WMS
+       var wmsImageryProvider = new Cesium.WebMapServiceImageryProvider({
+    url : 'http://localhost:8084/geoserver/osm/wms',
+    layers : 'osm_water',
+    parameters : {
+        transparent : 'true',
+       format : 'image/png',
+        crs : 'EPSG:4326',
+        tilingScheme: new Cesium.GeographicTilingScheme(),
+        styles : 'water_s'
+
+    }
+});
+
+viewer.imageryLayers.addImageryProvider(wmsImageryProvider);  
+
+
+
+
+
+
+
+
+
+// //WMTS
+// var imageryProvider = new Cesium.WebMapTileServiceImageryProvider({
+//     url: 'http://localhost:8084/geoserver/gwc/service/wmts',
+//     layer: 'osm:osm_water_wmts',
+//     style: 'raster',
+//     format: 'image/png',
+//     tileMatrixSetID: 'EPSG:4326',
+//     tileMatrixLabels:['EPSG:4326:0', 'EPSG:4326:1', 'EPSG:4326:2', 'EPSG:4326:3', 'EPSG:4326:4', 'EPSG:4326:5', 'EPSG:4326:6', 'EPSG:4326:7'] ,
+//     tilingScheme: new Cesium.GeographicTilingScheme(),
+//     maximumLevel: 7
+// });
+
+// viewer.imageryLayers.addImageryProvider(imageryProvider);
+// var lowerCorner = [25.93214225769043, 35.828147888183594];
+// var upperCorner = [44.97602844238281, 42.02083206176758];
+// var extent = Cesium.Rectangle.fromDegrees(lowerCorner[0], lowerCorner[1], upperCorner[0], upperCorner[1]);
+// viewer.camera.flyTo({
+//     destination : extent
+// });
+
+
+
+
+
+
+
+
+
+
+
+</script>
+  </body>
+</html>
